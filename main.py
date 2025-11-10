@@ -60,14 +60,22 @@ def main():
     print("-----------------")
     option = input("Enter your option (1-3): ")
     if option == "1":
-      text = input("Enter text for encryption: ")
-      key = input("Enter the password: ")
+      text = ""
+      while text == "":
+        text = input("Enter text for encryption: ")
+      key = ""
+      while key == "":
+        key = input("Enter the password: ")
       encrypted_text = encrypt(text, key)
       print("-----------------")
       print(f"Encrypted text (exclude outer ''): '{encrypted_text}'")
     elif option == "2":
-      text = input("Enter encrypted text: ")
-      key = input("Enter the password: ")
+      text = ""
+      while text == "":
+        text = input("Enter encrypted text: ")
+      key = ""
+      while key == "":
+        key = input("Enter the password: ")
       decrypted_text = decrypt(text, key)
       print("-----------------")
       print(f"Decrypted text (exclude outer ''): '{decrypted_text}'")
