@@ -26,7 +26,7 @@ def encrypt(text, key):
   key_indexes = get_indexes(change_length(key, text_len))
   for x in range(text_len):
     char_index = text_indexes[x] + key_indexes[x] + key_len + 1
-    if char_index >= char_list_len:
+    while char_index >= char_list_len:
       char_index -= char_list_len
     output.append(char_list[char_index])
   return "".join(output)
@@ -40,7 +40,7 @@ def decrypt(text, key):
   key_indexes = get_indexes(change_length(key, text_len))
   for x in range(text_len):
     char_index = text_indexes[x] - key_indexes[x] - key_len - 1
-    if char_index < 0:
+    while char_index < 0:
       char_index += char_list_len
     output.append(char_list[char_index])
   return "".join(output)
