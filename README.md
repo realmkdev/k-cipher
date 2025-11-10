@@ -86,6 +86,50 @@ Decrypted text (exclude outer ''): 'Hello123!'
 
 ---
 
+## ❓ FAQs
+
+### 1. Why are there outer `' '` around the encrypted or decrypted text?
+
+If your encrypted text starts **or ends** with a space (`" "`), it would be almost impossible to notice it in the output.
+To avoid confusion, the program wraps results inside **single quotes `' '`** — this helps you clearly see where the text begins and ends.
+
+Example:
+
+```
+Decrypted text (exclude outer ''): ' Hello '
+```
+
+Without the quotes, you wouldn’t know there are spaces before and after!
+
+---
+
+### 2. Can I use spaces, symbols, and numbers in my text or key?
+
+✅ Yes!
+The cipher supports:
+
+```
+A–Z, a–z, 0–9, and symbols like ! @ # $ % ^ & * ( ) etc.
+```
+
+Anything within the defined `char_list` can be encrypted or decrypted.
+
+---
+
+### 3. Is this encryption secure enough for real-world use?
+
+🔐 **No, it’s meant for educational purposes.**
+K-Cipher demonstrates how basic encryption and decryption logic works — it’s not intended for serious cryptographic use.
+
+---
+
+### 4. What happens if I use the wrong password for decryption?
+
+You’ll get meaningless output.
+Only the exact same key that was used for encryption can correctly decrypt the text.
+
+---
+
 ## 🧑‍💻 Author
 
 [**Muhammad Kamran**](https://github.com/realmkdev)
