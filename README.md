@@ -40,7 +40,27 @@ No external libraries are required — just Python 3!
 
 ## 🧩 Usage
 
-Run the script directly in your terminal:
+### **GUI**
+Based on your OS run the following command in your terminal:
+
+```bash
+python3 gui.py
+```
+OR
+```bash
+python gui.py
+```
+### Screenshots
+Encryption:
+
+![k_cipher GUI encryption demo](images/encryption_demo.png)
+
+Decryption:
+
+![k_cipher GUI decryption demo](images/decryption_demo.png)
+
+### **CLI**
+Based on your OS run the following command in your terminal:
 
 ```bash
 python3 main.py
@@ -49,7 +69,6 @@ OR
 ```bash
 python main.py
 ```
-based on your OS.
 
 You’ll see a simple menu:
 
